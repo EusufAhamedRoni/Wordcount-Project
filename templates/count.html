@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title_block %}
+  Count
+{% endblock %}
+
+{% block body_block %}
+<div class="container">
+  <h5 class="text-center">There are {{ count }} word in your sentence</h5>
+  <h4>Original:</h4>
+  {{ fulltext }}
+  <hr>
+  <h4>Word:</h4>
+  {% for words, counttotal in sortedwords  %}
+    {{ words }} - {{ counttotal }}
+    <br>
+  {% endfor %}
+  <a class="btn btn-primary mt-3" href="{% url 'home' %}" role="button">Start Again</a>
+</div>
+{% endblock %}
