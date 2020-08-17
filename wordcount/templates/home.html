@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
-{% block title_block %}
+{% block title %}
   Word Count
 {% endblock %}
 
-{% block body_block %}
+{% block content %}
 <div class="container">
   <form action="{% url 'count' %}">
     <textarea class="form-control" name="fulltext" rows="8" required></textarea>
